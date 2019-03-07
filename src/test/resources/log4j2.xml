@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" strict="true">
+    <Appenders>
+        <Appender type="Console" name="consoleOut" target="SYSTEM_OUT">
+            <Layout type="PatternLayout" pattern="%d %-5p [%t] %c: %m%n" />
+        </Appender>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="consoleOut" />
+        </Root>
+    </Loggers>
+</Configuration>

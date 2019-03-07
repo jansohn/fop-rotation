@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.test</groupId>
+    <artifactId>fop-rotation</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+    <name>Apache FOP rotation problem</name>
+    <description>Misplaced external graphic if PDF is rotated.</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <java-version>1.8</java-version>
+
+        <maven.compiler.target>${java-version}</maven.compiler.target>
+        <maven.compiler.source>${java-version}</maven.compiler.source>
+
+        <!-- dependency versions used in project -->
+        <log4j-version>2.11.1</log4j-version>
+        <fop-version>2.3</fop-version>
+        <pdfbox-version>2.0.13</pdfbox-version>
+        <junit-version>4.12</junit-version>
+        <assertj-version>3.11.1</assertj-version>
+    </properties>
+
+    <dependencies>
+        <!-- Logging with log4j-2.x -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${log4j-version}</version>
+        </dependency>
+
+        <!-- FOP -->
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>fop</artifactId>
+            <version>${fop-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>fop-pdf-images</artifactId>
+            <version>${fop-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>${pdfbox-version}</version>
+        </dependency>
+
+        <!-- dependencies for tests -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit-version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj-version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>

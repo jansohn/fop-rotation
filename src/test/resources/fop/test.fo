@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+    <xsl:output method="xml" indent="yes" />
+    <xsl:template match="/">
+        <fo:root>
+            <fo:layout-master-set>
+                <fo:simple-page-master master-name="A4-landscape" page-height="21.0cm" page-width="29.7cm" margin="2cm">
+                    <fo:region-body />
+                </fo:simple-page-master>
+            </fo:layout-master-set>
+            <fo:page-sequence master-reference="A4-landscape">
+                <fo:flow flow-name="xsl-region-body">
+                    <fo:block>
+                        Hello, World!
+                    </fo:block>
+                    <fo:block background-color="grey">
+                        <!-- this graphic gets misplaced -->
+                        <fo:external-graphic content-height="135mm" src="test-rotated.pdf" />
+                    </fo:block>
+                </fo:flow>
+            </fo:page-sequence>
+        </fo:root>
+    </xsl:template>
+</xsl:stylesheet>

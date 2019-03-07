@@ -1,0 +1,7 @@
+# Default ignore
+/bin/
+/logs/
+/target/
+/.settings/
+/.classpath
+/.project
