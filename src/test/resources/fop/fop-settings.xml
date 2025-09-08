@@ -5,6 +5,7 @@
                 <!-- automatically detect operating system installed fonts -->
                 <auto-detect />
             </fonts>
+            <form-xobject>true</form-xobject>
         </renderer>
     </renderers>
 </fop>

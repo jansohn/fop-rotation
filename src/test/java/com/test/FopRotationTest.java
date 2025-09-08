@@ -19,20 +19,19 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.sax.SAXResult;
 import javax.xml.transform.stream.StreamSource;
 
-import org.apache.avalon.framework.configuration.Configuration;
-import org.apache.avalon.framework.configuration.ConfigurationException;
-import org.apache.avalon.framework.configuration.DefaultConfigurationBuilder;
 import org.apache.fop.apps.FOPException;
 import org.apache.fop.apps.FOUserAgent;
 import org.apache.fop.apps.Fop;
 import org.apache.fop.apps.FopFactory;
 import org.apache.fop.apps.FopFactoryBuilder;
 import org.apache.fop.apps.MimeConstants;
+import org.apache.fop.configuration.Configuration;
+import org.apache.fop.configuration.ConfigurationException;
+import org.apache.fop.configuration.DefaultConfigurationBuilder;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.xml.sax.SAXException;
 
 public class FopRotationTest {
     private static final Logger log = LoggerFactory.getLogger(FopRotationTest.class);
@@ -44,7 +43,7 @@ public class FopRotationTest {
     private FopFactory fopFactory;
 
     @Before
-    public void setUp() throws URISyntaxException, ConfigurationException, SAXException, IOException {
+    public void setUp() throws URISyntaxException, ConfigurationException {
         URL url = FopRotationTest.class.getClassLoader().getResource("fop");
         assertThat(url).isNotNull();
         this.baseDirectory = Paths.get(url.toURI());

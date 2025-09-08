@@ -18,8 +18,8 @@
         <maven.compiler.source>${java-version}</maven.compiler.source>
 
         <!-- dependency versions used in project -->
-        <log4j-version>2.11.1</log4j-version>
-        <fop-version>2.3</fop-version>
+        <log4j-version>2.25.1</log4j-version>
+        <fop-version>2.11</fop-version>
         <junit-version>4.12</junit-version>
         <assertj-version>3.11.1</assertj-version>
     </properties>
@@ -28,7 +28,7 @@
         <!-- Logging with log4j-2.x -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
             <version>${log4j-version}</version>
         </dependency>
 
